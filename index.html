@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Computer Processors Work - Interactive Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-chip">⚡</div>
+                <span class="logo-text">CPU Explorer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#what-is-cpu">Basics</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="color-blob blob-1"></div>
+            <div class="color-blob blob-2"></div>
+            <div class="color-blob blob-3"></div>
+            <div class="color-blob blob-4"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">🚀</span>
+                <span>Interactive Learning</span>
+            </div>
+            
+            <h1 class="hero-title">
+                Discover the Magic of
+                <span class="rainbow-text">Computer Processors</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Explore how tiny silicon chips power everything from smartphones to supercomputers!
+            </p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="start-learning">
+                    <span>Start Exploring</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+            
+            <div class="cpu-showcase">
+                <div class="showcase-card">
+                    <div class="cpu-visual">
+                        <div class="cpu-core">
+                            <div class="core-inner"></div>
+                            <div class="core-ring ring-1"></div>
+                            <div class="core-ring ring-2"></div>
+                            <div class="core-ring ring-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">5+</div>
+                    <div class="stat-label">Billion Cycles/Sec</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">🔬</div>
+                    <div class="stat-number">3nm</div>
+                    <div class="stat-label">Transistor Size</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">🧠</div>
+                    <div class="stat-number">100B+</div>
+                    <div class="stat-label">Transistors per Chip</div>
+                </div>
+                <div class="stat-card fade-in">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-number">16+</div>
+                    <div class="stat-label">Cores Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is a CPU Section -->
+    <section id="what-is-cpu" class="section what-is-cpu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Basics</span>
+                <h2 class="section-title fade-in">What is a CPU?</h2>
+                <p class="section-subtitle fade-in">The brain that makes your computer think</p>
+            </div>
+            
+            <div class="cpu-intro-layout">
+                <div class="intro-visual fade-in">
+                    <div class="rotating-chip">
+                        <div class="chip-face face-front">Silicon</div>
+                        <div class="chip-face face-back">Circuit</div>
+                        <div class="chip-face face-left">Cache</div>
+                        <div class="chip-face face-right">Cores</div>
+                    </div>
+                </div>
+                
+                <div class="intro-content">
+                    <div class="feature-box fade-in">
+                        <div class="feature-emoji">🧠</div>
+                        <div class="feature-text">
+                            <h3>The Computer's Brain</h3>
+                            <p>A CPU is like your computer's brain - it makes decisions, performs calculations, and controls everything!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-box fade-in">
+                        <div class="feature-emoji">⚡</div>
+                        <div class="feature-text">
+                            <h3>Lightning Fast</h3>
+                            <p>Modern processors execute billions of instructions per second - faster than you can blink!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-box fade-in">
+                        <div class="feature-emoji">🔬</div>
+                        <div class="feature-text">
+                            <h3>Incredibly Tiny</h3>
+                            <p>CPUs contain billions of transistors smaller than a human hair!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="section how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Process</span>
+                <h2 class="section-title fade-in">How Does a CPU Work?</h2>
+                <p class="section-subtitle fade-in">Follow the journey of an instruction</p>
+            </div>
+            
+            <div class="process-pipeline">
+                <div class="pipeline-step fade-in">
+                    <div class="step-visual step-purple">
+                        <div class="step-icon">📥</div>
+                    </div>
+                    <div class="step-info">
+                        <div class="step-number">01</div>
+                        <h3>Fetch</h3>
+                        <p>Instructions are fetched from memory and brought into the CPU</p>
+                    </div>
+                </div>
+                
+                <div class="pipeline-step fade-in">
+                    <div class="step-visual step-pink">
+                        <div class="step-icon">🔍</div>
+                    </div>
+                    <div class="step-info">
+                        <div class="step-number">02</div>
+                        <h3>Decode</h3>
+                        <p>The Control Unit decodes what the instruction means</p>
+                    </div>
+                </div>
+                
+                <div class="pipeline-step fade-in">
+                    <div class="step-visual step-blue">
+                        <div class="step-icon">⚙️</div>
+                    </div>
+                    <div class="step-info">
+                        <div class="step-number">03</div>
+                        <h3>Execute</h3>
+                        <p>The ALU performs the actual calculation or operation</p>
+                    </div>
+                </div>
+                
+                <div class="pipeline-step fade-in">
+                    <div class="step-visual step-green">
+                        <div class="step-icon">💾</div>
+                    </div>
+                    <div class="step-info">
+                        <div class="step-number">04</div>
+                        <h3>Store</h3>
+                        <p>Results are saved back to memory or registers</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cycle-banner fade-in">
+                <div class="banner-icon">🔄</div>
+                <div class="banner-text">
+                    <h4>This happens billions of times every second!</h4>
+                    <p>Your CPU repeats this cycle continuously to run all your programs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="section components">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Inside the CPU</span>
+                <h2 class="section-title fade-in">CPU Components</h2>
+                <p class="section-subtitle fade-in">The building blocks of processing power</p>
+            </div>
+            
+            <div class="components-grid">
+                <div class="component-card fade-in card-purple">
+                    <div class="component-icon">🎮</div>
+                    <h3>Control Unit</h3>
+                    <p>Directs all CPU operations like a conductor leading an orchestra</p>
+                    <div class="component-tag">Coordinator</div>
+                </div>
+                
+                <div class="component-card fade-in card-pink">
+                    <div class="component-icon">🧮</div>
+                    <h3>ALU</h3>
+                    <p>Arithmetic Logic Unit - handles all math and logical operations</p>
+                    <div class="component-tag">Calculator</div>
+                </div>
+                
+                <div class="component-card fade-in card-blue">
+                    <div class="component-icon">⚡</div>
+                    <h3>Registers</h3>
+                    <p>Ultra-fast storage holding data currently being processed</p>
+                    <div class="component-tag">Fastest Memory</div>
+                </div>
+                
+                <div class="component-card fade-in card-green">
+                    <div class="component-icon">🗄️</div>
+                    <h3>Cache</h3>
+                    <p>Smart buffer storing frequently used data (L1, L2, L3)</p>
+                    <div class="component-tag">Quick Access</div>
+                </div>
+                
+                <div class="component-card fade-in card-orange">
+                    <div class="component-icon">🔄</div>
+                    <h3>Cores</h3>
+                    <p>Multiple processing units working in parallel</p>
+                    <div class="component-tag">Multitasking</div>
+                </div>
+                
+                <div class="component-card fade-in card-yellow">
+                    <div class="component-icon">⏱️</div>
+                    <h3>Clock</h3>
+                    <p>Synchronizes all operations measured in GHz</p>
+                    <div class="component-tag">Heartbeat</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clock Speed Section -->
+    <section id="clock-speed" class="section clock-speed">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Speed Matters</span>
+                <h2 class="section-title fade-in">Understanding Clock Speed</h2>
+                <p class="section-subtitle fade-in">More GHz = More power</p>
+            </div>
+            
+            <div class="speed-comparison fade-in">
+                <div class="speed-item">
+                    <div class="speed-bar">
+                        <div class="bar-fill bar-slow"></div>
+                    </div>
+                    <div class="speed-info">
+                        <div class="speed-value">1 GHz</div>
+                        <div class="speed-desc">1 billion cycles/second</div>
+                        <div class="speed-example">Basic tasks</div>
+                    </div>
+                </div>
+                
+                <div class="speed-item">
+                    <div class="speed-bar">
+                        <div class="bar-fill bar-medium"></div>
+                    </div>
+                    <div class="speed-info">
+                        <div class="speed-value">3 GHz</div>
+                        <div class="speed-desc">3 billion cycles/second</div>
+                        <div class="speed-example">Gaming & work</div>
+                    </div>
+                </div>
+                
+                <div class="speed-item">
+                    <div class="speed-bar">
+                        <div class="bar-fill bar-fast"></div>
+                    </div>
+                    <div class="speed-info">
+                        <div class="speed-value">5+ GHz</div>
+                        <div class="speed-desc">5+ billion cycles/second</div>
+                        <div class="speed-example">Maximum performance!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cores Section -->
+    <section id="performance" class="section cores-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Parallel Power</span>
+                <h2 class="section-title fade-in">Cores & Multitasking</h2>
+                <p class="section-subtitle fade-in">See how multiple cores work together</p>
+            </div>
+            
+            <div class="cores-interactive fade-in">
+                <div class="core-selector">
+                    <button class="core-btn active" data-cores="1">1 Core</button>
+                    <button class="core-btn" data-cores="2">2 Cores</button>
+                    <button class="core-btn" data-cores="4">4 Cores</button>
+                    <button class="core-btn" data-cores="8">8 Cores</button>
+                </div>
+                
+                <div class="cores-display" id="cores-display"></div>
+                
+                <div class="core-explanation">
+                    <div class="explanation-item">
+                        <span class="exp-icon">🔄</span>
+                        <div class="exp-text">
+                            <h4>More Cores = Better Multitasking</h4>
+                            <p>Each core handles different tasks simultaneously</p>
+                        </div>
+                    </div>
+                    <div class="explanation-item">
+                        <span class="exp-icon">🧵</span>
+                        <div class="exp-text">
+                            <h4>Threads Double Efficiency</h4>
+                            <p>Modern CPUs run 2 threads per core</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analogies Section -->
+    <section id="analogies" class="section analogies">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Easy Examples</span>
+                <h2 class="section-title fade-in">Real-Life Analogies</h2>
+                <p class="section-subtitle fade-in">CPU concepts made simple</p>
+            </div>
+            
+            <div class="analogies-grid">
+                <div class="analogy-card fade-in">
+                    <div class="analogy-visual">
+                        <div class="visual-emoji">🧠</div>
+                    </div>
+                    <h3>Like Your Brain</h3>
+                    <div class="analogy-list">
+                        <div class="analogy-item">
+                            <strong>Control Unit</strong> = Conscious decision-making
+                        </div>
+                        <div class="analogy-item">
+                            <strong>ALU</strong> = Math & logic processing
+                        </div>
+                        <div class="analogy-item">
+                            <strong>Registers</strong> = Short-term memory
+                        </div>
+                        <div class="analogy-item">
+                            <strong>Cache</strong> = Recent memories
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analogy-card fade-in">
+                    <div class="analogy-visual">
+                        <div class="visual-emoji">🏭</div>
+                    </div>
+                    <h3>Like a Factory</h3>
+                    <div class="analogy-list">
+                        <div class="analogy-item">
+                            <strong>Control Unit</strong> = Factory manager
+                        </div>
+                        <div class="analogy-item">
+                            <strong>ALU</strong> = Assembly line
+                        </div>
+                        <div class="analogy-item">
+                            <strong>Cores</strong> = Production lines
+                        </div>
+                        <div class="analogy-item">
+                            <strong>Clock Speed</strong> = Conveyor speed
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analogy-card fade-in">
+                    <div class="analogy-visual">
+                        <div class="visual-emoji">👨‍🍳</div>
+                    </div>
+                    <h3>Like a Chef</h3>
+                    <div class="analogy-list">
+                        <div class="analogy-item">
+                            <strong>Instructions</strong> = Customer orders
+                        </div>
+                        <div class="analogy-item">
+                            <strong>Control Unit</strong> = Chef organizing
+                        </div>
+                        <div class="analogy-item">
+                            <strong>ALU</strong> = Cooking process
+                        </div>
+                        <div class="analogy-item">
+                            <strong>Multi-core</strong> = Multiple chefs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section id="why-matters" class="section why-matters">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Real Impact</span>
+                <h2 class="section-title fade-in">Why CPUs Matter</h2>
+                <p class="section-subtitle fade-in">Powering your digital life</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card fade-in">
+                    <div class="impact-icon">🎮</div>
+                    <h3>Gaming</h3>
+                    <p>High FPS, smooth gameplay, realistic AI opponents</p>
+                </div>
+                
+                <div class="impact-card fade-in">
+                    <div class="impact-icon">🎬</div>
+                    <h3>Video Editing</h3>
+                    <p>Fast 4K rendering and real-time effects</p>
+                </div>
+                
+                <div class="impact-card fade-in">
+                    <div class="impact-icon">💻</div>
+                    <h3>Programming</h3>
+                    <p>Quick compilation and efficient development</p>
+                </div>
+                
+                <div class="impact-card fade-in">
+                    <div class="impact-icon">🎯</div>
+                    <h3>Multitasking</h3>
+                    <p>Run dozens of apps without slowdowns</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Questions?</span>
+                <h2 class="section-title fade-in">FAQ</h2>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>What's the difference between CPU and GPU?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>CPUs have few powerful cores for general tasks. GPUs have thousands of smaller cores for parallel tasks like graphics. Think: CPU = brilliant professor, GPU = classroom of students!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Is higher clock speed always better?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not always! Architecture matters too. A newer 3.5 GHz CPU can beat an older 4.5 GHz chip. It's like comparing a modern sports car to an old race car!</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>How many cores do I need?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Basic tasks: 2-4 cores. Gaming: 6-8 cores. Content creation: 8-12 cores. Professional work: 16+ cores.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h3>Why is cache important?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Cache stores frequently used data close to CPU cores for instant access. More cache = better performance in many apps!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-chip">⚡</div>
+                    <span>CPU Explorer</span>
+                </div>
+                <p class="footer-text">Making computer science fun and accessible</p>
+                <p class="footer-copy">© 2026 CPU Explorer • Educational Resource</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
